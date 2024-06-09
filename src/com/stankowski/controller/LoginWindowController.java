@@ -1,4 +1,4 @@
-package com.stankowski.view;
+package com.stankowski.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
