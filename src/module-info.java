@@ -5,6 +5,7 @@ module EmailClientJavaFX {
     requires javafx.web;
     requires activation;
     requires java.mail;
+    requires jdk.compiler;
 
     opens com.stankowski;
     opens com.stankowski.view;
