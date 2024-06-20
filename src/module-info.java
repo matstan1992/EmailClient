@@ -10,4 +10,5 @@ module EmailClientJavaFX {
     opens com.stankowski;
     opens com.stankowski.view;
     opens com.stankowski.controller;
+    opens com.stankowski.model;
 }
