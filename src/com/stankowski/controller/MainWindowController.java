@@ -1,6 +1,7 @@
 package com.stankowski.controller;
 
 import com.stankowski.EmailManager;
+import com.stankowski.controller.services.MessageRendererService;
 import com.stankowski.model.EmailMessage;
 import com.stankowski.model.EmailTreeItem;
 import com.stankowski.model.SizeInteger;
@@ -45,6 +46,8 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private WebView emailsWebView;
 
+    private MessageRendererService messageRendererService;
+
     public MainWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
         super(emailManager, viewFactory, fxmlName);
     }
@@ -65,6 +68,22 @@ public class MainWindowController extends BaseController implements Initializabl
         setUpEmailsTableView();
         setUpFolderSelection();
         setUpBoldRows();
+        setUpMessageRendererService();
+        setUpMessageSelection();
+    }
+
+    private void setUpMessageSelection() {
+        emailsTableView.setOnMouseClicked(event -> {
+            EmailMessage emailMessage = emailsTableView.getSelectionModel().getSelectedItem();
+            if(emailMessage != null) {
+                messageRendererService.setEmailMessage(emailMessage);
+                messageRendererService.restart();
+            }
+        });
+    }
+
+    private void setUpMessageRendererService() {
+        messageRendererService = new MessageRendererService(emailsWebView.getEngine());
     }
 
     private void setUpBoldRows() {
