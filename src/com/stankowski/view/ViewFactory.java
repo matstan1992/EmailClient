@@ -1,10 +1,7 @@
 package com.stankowski.view;
 
 import com.stankowski.EmailManager;
-import com.stankowski.controller.BaseController;
-import com.stankowski.controller.LoginWindowController;
-import com.stankowski.controller.MainWindowController;
-import com.stankowski.controller.OptionsWindowController;
+import com.stankowski.controller.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -67,6 +64,13 @@ public class ViewFactory {
         System.out.println("options window called");
 
         BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
+        initializeStage(controller);
+    }
+
+    public void showComposeMessageWindow() {
+        System.out.println("composeMessage window called");
+
+        BaseController controller = new ComposeMessageController(emailManager, this, "ComposeMessageWindow.fxml");
         initializeStage(controller);
     }
 
