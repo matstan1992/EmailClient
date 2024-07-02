@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="724.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="674.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="14.0" layoutY="88.0" prefHeight="17.0" prefWidth="65.0" text="Recipient:" />
-      <Label layoutX="14.0" layoutY="124.0" prefHeight="17.0" prefWidth="65.0" text="Subject: " />
-      <TextField fx:id="recipientTextField" layoutX="79.0" layoutY="84.0" prefHeight="25.0" prefWidth="540.0" />
-      <TextField fx:id="subjectTextField" layoutX="79.0" layoutY="120.0" prefHeight="25.0" prefWidth="540.0" />
-      <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="12.0" layoutY="152.0" prefHeight="516.0" prefWidth="607.0" />
-      <Button layoutX="520.0" layoutY="676.0" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="25.0" prefWidth="99.0" text="Send" />
-      <Label fx:id="errorLabel" layoutX="30.0" layoutY="680.0" prefHeight="17.0" prefWidth="233.0" />
-      <Label layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="65.0" text="Account:" />
-      <ChoiceBox fx:id="emailAccountChoice" layoutX="79.0" layoutY="38.0" prefHeight="25.0" prefWidth="540.0" />
+      <Label layoutX="14.0" layoutY="70.0" prefHeight="16.0" prefWidth="94.0" text="Recipient:" style="-fx-text-fill: black;"/>
+      <Label layoutX="14.0" layoutY="105.0" prefHeight="16.0" prefWidth="94.0" text="Subject: " style="-fx-text-fill: black;"/>
+      <TextField fx:id="recipientTextField" layoutX="88.0" layoutY="65.0" prefHeight="26.0" prefWidth="590.0" />
+      <TextField fx:id="subjectTextField" layoutX="88.0" layoutY="100.0" prefHeight="26.0" prefWidth="590.0" />
+      <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="178.0" prefHeight="446.0" prefWidth="667.0" />
+      <Button layoutX="568.0" layoutY="628.0" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="32.0" prefWidth="110.0" text="Send" />
+      <Label fx:id="errorLabel" layoutX="25.0" layoutY="636.0" prefHeight="16.0" prefWidth="287.0" style="-fx-text-fill: black;"/>
+      <Label layoutX="14.0" layoutY="39.0" prefHeight="16.0" prefWidth="94.0" text="Account:" style="-fx-text-fill: black;"/>
+      <ChoiceBox fx:id="emailAccountChoice" layoutX="88.0" layoutY="34.0" prefHeight="26.0" prefWidth="590.0" />
    </children>
 </AnchorPane>
